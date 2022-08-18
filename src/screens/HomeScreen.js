@@ -34,7 +34,9 @@ function HomeScreen() {
     const getData = async () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
-        const response = await axios.get("/api/products");
+        const response = await axios.get(
+          "https://cr7products.herokuapp.com/api/products"
+        );
         dispatch({ type: "FETCH_SUCCESS", payload: response.data });
         // setProducts(response.data);
       } catch (err) {

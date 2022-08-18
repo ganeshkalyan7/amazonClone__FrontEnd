@@ -29,11 +29,14 @@ function SingupScreen() {
       return;
     }
     try {
-      const { data } = await Axios.post("/api/users/signup", {
-        name,
-        email,
-        password,
-      });
+      const { data } = await Axios.post(
+        "https://cr7products.herokuapp.com/api/users/signup",
+        {
+          name,
+          email,
+          password,
+        }
+      );
       ctxDispatch({ type: "USER_SIGNIN", payload: data });
       localStorage.setItem("userInfo", JSON.stringify(data));
       navigate(redirect || "/");
