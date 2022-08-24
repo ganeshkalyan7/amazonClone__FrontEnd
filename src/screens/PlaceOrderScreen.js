@@ -69,7 +69,9 @@ function PlaceOrderScreen() {
     } catch (err) {
       dispatch({ type: "CREATE_FAIL" });
       console.log(err);
-      toast.error(err.response.data.error);
+      toast.error(
+        "Token Not Found , please logout and login  once again to get a token "
+      );
     }
   };
 

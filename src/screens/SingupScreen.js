@@ -39,7 +39,7 @@ function SingupScreen() {
       );
       ctxDispatch({ type: "USER_SIGNIN", payload: data });
       localStorage.setItem("userInfo", JSON.stringify(data));
-      navigate(redirect || "/");
+      navigate(redirect);
     } catch (err) {
       toast.error(err.response.data.msg);
     }

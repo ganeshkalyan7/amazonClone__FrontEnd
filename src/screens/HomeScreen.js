@@ -38,6 +38,7 @@ function HomeScreen() {
           "https://cr7products.herokuapp.com/api/products"
         );
         dispatch({ type: "FETCH_SUCCESS", payload: response.data });
+
         // setProducts(response.data);
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
